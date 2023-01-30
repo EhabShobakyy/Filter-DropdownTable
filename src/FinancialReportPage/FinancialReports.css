@@ -1,0 +1,29 @@
+.financial-reports {
+color :#707070
+}
+.financial-reports select {
+    background-color: #dddddd5e;
+    border:2px solid #ffe738;
+    border-radius: 5px;
+    color: #333333b3;
+    font-weight: 600;
+    padding: 2px 30px;
+    cursor: pointer;
+}
+.reports-table  {
+    margin: 30px 0px;
+}
+.reports-table thead tr th {
+    text-align: center;
+}
+.reports-table td,
+.reports-table th {
+    padding: 10px;
+    border-bottom: 1px solid gainsboro;
+}
+.reports-table .btn-dark {
+    background-color: #2866a0 ;
+    border: none;
+    color: #fff;
+    font-size: 13px;
+} 
