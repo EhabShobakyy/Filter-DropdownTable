@@ -10,9 +10,11 @@ color :#707070
     padding: 2px 30px;
     cursor: pointer;
 }
-.reports-table  {
+.reports-table {
+    overflow-x: auto;
     margin: 30px 0px;
 }
+
 .reports-table thead tr th {
     text-align: center;
 }

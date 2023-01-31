@@ -50,163 +50,167 @@ function FinancialReport() {
             })}
           </select>
 
-          <table
-            className="reports-table text-center"
-            style={{ width: "100%" }}
-          >
-            <thead>
-              <tr>
-                <th style={{ textAlign: "left" }}>Year</th>
-                <th>Q1</th>
-                <th>Q2</th>
-                <th>Q3</th>
-                <th>Q4</th>
-                <th>Annual</th>
-                <th>Board</th>
-              </tr>
-            </thead>
-            <tbody>
-              {filterReports?.slice(0, 5)?.map((item, id) => {
-                return (
-                  <tr className="py-3" key={id}>
-                    <td style={{ textAlign: "left" }}>{item.year}</td>
-                    <td>
-                      {item.q1en != "" && (
-                        <a
-                          target="_blank"
-                          download
-                          className="btn btn-dark btn-sm m-1"
-                          href={item.q1en}
-                        >
-                          EN
-                        </a>
-                      )}
-                      {item.q1ar != "" && (
-                        <a
-                          target="_blank"
-                          download
-                          className="btn btn-dark btn-sm m-1"
-                          href={item.q1ar}
-                        >
-                          AR
-                        </a>
-                      )}
-                    </td>
-                    <td>
-                      {item.q2en != "" && (
-                        <a
-                          target="_blank"
-                          download
-                          className="btn btn-dark btn-sm m-1"
-                          href={item.q2enn}
-                        >
-                          EN
-                        </a>
-                      )}
-                      {item.q2ar != "" && (
-                        <a
-                          target="_blank"
-                          download
-                          className="btn btn-dark btn-sm m-1"
-                          href={item.q2ar}
-                        >
-                          AR
-                        </a>
-                      )}
-                    </td>
-                    <td>
-                      {item.q3en != "" && (
-                        <a
-                          target="_blank"
-                          download
-                          className="btn btn-dark btn-sm m-1"
-                          href={item.q3en === "" ? "" : item.q3en}
-                        >
-                          EN
-                        </a>
-                      )}
-                      {item.q3ar != "" && (
-                        <a
-                          target="_blank"
-                          download
-                          className="btn btn-dark btn-sm m-1"
-                          href={item.q3ar === "" ? "" : item.q3ar}
-                        >
-                          AR
-                        </a>
-                      )}
-                    </td>
-                    <td>
-                      {item.q4en != "" && (
-                        <a
-                          target="_blank"
-                          download
-                          className="btn btn-dark btn-sm m-1"
-                          href={item.q4en}
-                        >
-                          EN
-                        </a>
-                      )}
-                      {item.q4ar != "" && (
-                        <a
-                          target="_blank"
-                          download
-                          className="btn btn-dark btn-sm m-1"
-                          href={item.q4ar}
-                        >
-                          AR
-                        </a>
-                      )}
-                    </td>
-                    <td>
-                      {item.annualen != "" && (
-                        <a
-                          target="_blank"
-                          download
-                          className="btn btn-dark btn-sm m-1"
-                          href={item.annualen}
-                        >
-                          EN
-                        </a>
-                      )}
-                      {item.annualar != "" && (
-                        <a
-                          target="_blank"
-                          download
-                          className="btn btn-dark btn-sm m-1"
-                          href={item.annualar}
-                        >
-                          AR
-                        </a>
-                      )}
-                    </td>
-                    <td>
-                      {item.managementen != "" && item.managementen != null && (
-                        <a
-                          target="_blank"
-                          download
-                          className="btn btn-dark btn-sm m-1"
-                          href={item.managementen}
-                        >
-                          EN
-                        </a>
-                      )}
-                      {item.managementar != "" && item.managementar != null && (
-                        <a
-                          target="_blank"
-                          download
-                          className="btn btn-dark btn-sm m-1"
-                          href={item.managementar}
-                        >
-                          AR
-                        </a>
-                      )}
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+          <div className="reports-table">
+            <table
+              className="table table-responsive text-center"
+              style={{ width: "100%" }}
+            >
+              <thead>
+                <tr>
+                  <th style={{ textAlign: "left" }}>Year</th>
+                  <th>Q1</th>
+                  <th>Q2</th>
+                  <th>Q3</th>
+                  <th>Q4</th>
+                  <th>Annual</th>
+                  <th>Board</th>
+                </tr>
+              </thead>
+              <tbody>
+                {filterReports?.slice(0, 5)?.map((item, id) => {
+                  return (
+                    <tr className="py-3" key={id}>
+                      <td style={{ textAlign: "left" }}>{item.year}</td>
+                      <td>
+                        {item.q1en != "" && (
+                          <a
+                            target="_blank"
+                            download
+                            className="btn btn-dark btn-sm m-1"
+                            href={item.q1en}
+                          >
+                            EN
+                          </a>
+                        )}
+                        {item.q1ar != "" && (
+                          <a
+                            target="_blank"
+                            download
+                            className="btn btn-dark btn-sm m-1"
+                            href={item.q1ar}
+                          >
+                            AR
+                          </a>
+                        )}
+                      </td>
+                      <td>
+                        {item.q2en != "" && (
+                          <a
+                            target="_blank"
+                            download
+                            className="btn btn-dark btn-sm m-1"
+                            href={item.q2enn}
+                          >
+                            EN
+                          </a>
+                        )}
+                        {item.q2ar != "" && (
+                          <a
+                            target="_blank"
+                            download
+                            className="btn btn-dark btn-sm m-1"
+                            href={item.q2ar}
+                          >
+                            AR
+                          </a>
+                        )}
+                      </td>
+                      <td>
+                        {item.q3en != "" && (
+                          <a
+                            target="_blank"
+                            download
+                            className="btn btn-dark btn-sm m-1"
+                            href={item.q3en === "" ? "" : item.q3en}
+                          >
+                            EN
+                          </a>
+                        )}
+                        {item.q3ar != "" && (
+                          <a
+                            target="_blank"
+                            download
+                            className="btn btn-dark btn-sm m-1"
+                            href={item.q3ar === "" ? "" : item.q3ar}
+                          >
+                            AR
+                          </a>
+                        )}
+                      </td>
+                      <td>
+                        {item.q4en != "" && (
+                          <a
+                            target="_blank"
+                            download
+                            className="btn btn-dark btn-sm m-1"
+                            href={item.q4en}
+                          >
+                            EN
+                          </a>
+                        )}
+                        {item.q4ar != "" && (
+                          <a
+                            target="_blank"
+                            download
+                            className="btn btn-dark btn-sm m-1"
+                            href={item.q4ar}
+                          >
+                            AR
+                          </a>
+                        )}
+                      </td>
+                      <td>
+                        {item.annualen != "" && (
+                          <a
+                            target="_blank"
+                            download
+                            className="btn btn-dark btn-sm m-1"
+                            href={item.annualen}
+                          >
+                            EN
+                          </a>
+                        )}
+                        {item.annualar != "" && (
+                          <a
+                            target="_blank"
+                            download
+                            className="btn btn-dark btn-sm m-1"
+                            href={item.annualar}
+                          >
+                            AR
+                          </a>
+                        )}
+                      </td>
+                      <td>
+                        {item.managementen != "" &&
+                          item.managementen != null && (
+                            <a
+                              target="_blank"
+                              download
+                              className="btn btn-dark btn-sm m-1"
+                              href={item.managementen}
+                            >
+                              EN
+                            </a>
+                          )}
+                        {item.managementar != "" &&
+                          item.managementar != null && (
+                            <a
+                              target="_blank"
+                              download
+                              className="btn btn-dark btn-sm m-1"
+                              href={item.managementar}
+                            >
+                              AR
+                            </a>
+                          )}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </>
